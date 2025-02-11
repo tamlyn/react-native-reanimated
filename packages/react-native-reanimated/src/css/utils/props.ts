@@ -23,8 +23,8 @@ export function filterCSSAndStyleProperties<S extends AnyRecord>(
   PlainStyle,
 ] {
   let animationName: CSSAnimationProperties['animationName'] | null = null;
-  const animationProperties: Partial<CSSAnimationProperties> = {};
-  const transitionProperties: Partial<CSSTransitionProperties> = {};
+  const animationProperties: CSSAnimationProperties = {};
+  const transitionProperties: CSSTransitionProperties = {};
   const filteredStyle: AnyRecord = {};
 
   for (const [prop, value] of Object.entries(style)) {
