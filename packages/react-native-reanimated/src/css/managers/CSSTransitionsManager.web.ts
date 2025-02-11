@@ -33,7 +33,6 @@ export default class CSSTransitionsManager {
     this.element.style.transitionDelay = '';
     this.element.style.transitionProperty = '';
     this.element.style.transitionTimingFunction = '';
-    // @ts-ignore this is correct
     this.element.style.transitionBehavior = '';
   }
 
@@ -70,7 +69,6 @@ export default class CSSTransitionsManager {
     }
 
     if (propertiesAsArray.transitionBehavior) {
-      // @ts-ignore this is correct
       this.element.style.transitionBehavior =
         propertiesAsArray.transitionBehavior.map(kebabizeCamelCase).join(',');
     }
